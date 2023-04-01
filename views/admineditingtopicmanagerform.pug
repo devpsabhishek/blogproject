@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        title Admineditingtopic form
+        link(href="../../admineditingtopicmanagerform.css")
+    body
+        if(message)
+            p #{message}
+        .contactpage 
+            form(action=`/Edittopicmanager/${id}` method='post')
+                p Editing  form
+                .inputform
+                    label.inputblock(for='name') Name
+                    input#description(type='text' name='name' value=`${name}`)
+                .inputform
+                    label.inputblock(for='subject') Subject
+                    select#subject(name='subject')
+                        option(value= `${subjectid}` checked='') #{topic1}
+                        each val in subject
+                            option(value=`${val._id}`) #{val.subject}
+                .inputform
+                    input#submit.submitbutton.inputblock(type='Submit' value='Submit') 

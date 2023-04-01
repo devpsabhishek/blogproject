@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        title Articleeditdelete
+        link(href='topicmanageracceptrejectartcles.css' rel='stylesheet')
+        script(src='confirmarticledelete.js' defer='')
+    body
+       h4 Users list 
+       table
+            tr 
+                th Email
+                th Subject
+                th Article
+                th Title
+                th Description
+                th Approved
+                th Accept
+                th Reject
+            tr
+                each val in data1
+                    td #{val.email}
+                    td #{val.subject}
+                    td #{val.article}
+                    td #{val.title}
+                    td #{val.description}
+                    td #{val.approved}
+                    td
+                        a.accept(href = `/acceptarticle/${val._id}`) Accept
+                    td    
+                        a.reject(href = `/rejectarticle/${val._id}`) Reject
+                        tr

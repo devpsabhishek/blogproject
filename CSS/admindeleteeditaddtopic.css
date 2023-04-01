@@ -1,0 +1,43 @@
+h4
+{
+  font-size: larger;
+    color:red;
+    margin-left:100px;
+}
+table, th, td {
+    border:1px solid black;
+    margin-left:100px;
+    padding:10px;
+    border-collapse: collapse;
+  }
+  td a.edit
+  {
+    text-decoration: none;
+    background-color: green;
+    padding:5px;
+  }
+  td a.delete
+  {
+    text-decoration: none;
+    background-color: #ff0026;
+    padding:5px;
+    cursor:pointer;
+  }
+  .style{
+    margin-top:100px;
+   
+  }
+  .style a
+  {
+    text-decoration:none;
+   margin-left:200px;
+    background-color: rgb(40, 15, 110);
+    color:white;
+    padding:10px;
+    border-radius: 10px;
+  }
+  .style a:hover
+  {
+    background-color: #00ffd0;
+  }
+ 

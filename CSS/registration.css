@@ -1,0 +1,114 @@
+.missingfield  h3
+{
+   margin:20px;
+   color:red;
+}
+.userexist h3{
+  margin:20px;
+  color:red;
+}
+ 
+.contactpage
+{
+    
+    background-color:lightblue;
+    height:90%;
+    width:40%;
+    margin:auto;
+    margin-top:20px;
+    padding:40px;
+
+}
+.inputblock
+{
+    display: block;
+}
+.inputform
+{
+    margin:20px;
+}
+.pstyle
+{
+    color:red;
+}
+
+
+/*form style*/
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+   
+     background-color:rgba(0, 195, 255, 0.534);
+
+    color:white;
+    border-radius:5px;
+
+  }
+  input[type=tel] {
+    width: 50%;
+    padding: 12px 20px;
+   
+     background-color:rgba(0, 195, 255, 0.534);
+
+    color:white;
+    border-radius:5px;
+
+  }
+  input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+   
+     background-color:rgba(0, 195, 255, 0.534);
+
+    color:white;
+    border-radius:5px;
+
+  }
+  textarea
+  {
+    width: 50%;
+    padding:10px;
+    border-radius:5px;
+    background-color:rgba(0, 217, 255, 0.534);
+
+  }
+  input[type=submit]
+  {
+    background-color:rgba(0, 217, 255, 0.534);
+    cursor:pointer;
+    border-radius: 10px;
+    padding:10px;
+
+  }
+  input[type=submit]:hover
+  {
+    border:1px solid red;
+    background-color:blue;
+    color:white;
+  }
+  input[type=email]
+ {
+     width: 50%;
+    padding: 12px 20px;
+           
+    background-color:rgba(0, 195, 255, 0.534);
+        
+   color:white;
+    border-radius:5px;
+            
+}
+
+input[type=submit]
+  {
+    background-color:rgba(0, 217, 255, 0.534);
+    cursor:pointer;
+    border-radius: 10px;
+    padding:10px;
+
+  }
+  input[type=submit]:hover
+  {
+    border:1px solid red;
+    background-color:blue;
+    color:white;
+  }

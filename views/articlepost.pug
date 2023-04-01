@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Articles
+        link(href='../../aticlepost.css' rel='stylesheet')
+        script(src='https://jsuites.net/v4/jsuites.js')
+        script(src='https://jsuites.net/v4/jsuites.webcomponents.js')
+        link(rel='stylesheet' href='https://jsuites.net/v4/jsuites.css' type='text/css')
+        script(src='../../validationcomment1.js' defer='')
+        script(src='../../rating.js' defer='')
+    body 
+        .container
+            if(heading)
+                h3 About #{heading}
+            each val in article    
+                .contentarticle
+                    .articlecintent 
+                        h2 Article
+                            p #{val.article}
+                    .articleby        
+                        h4 Posted by 
+                            p #{val.email}
+                    P Comments
+                        br        
+                        each val2 in usercomments 
+                            if val._id == val2.articleid
+                                label(for =" commentby") #{val2.commentby} 
+                                input(type="text" name="forcommentdisplay" value=`${ val2.comment}`)                      
+                    if typeuser == "premiumuser"
+                        form.formsubmit(action=`/commentsubmit/${val._id}/${val.email}`,method="post")
+                            label.commentlabel(for='comments') comments
+                            textarea#comments( rows='5' cols='15' name='comments')
+                            label.ratinglabel( for='rating') Rating
+                            jsuites-rating(value='4' tooltip='Ugly, Bad, Average, Good, Outstanding')
+                            input#rating( type='text' name='rating')
+                            input(type='submit' value='submit')
+                            script.
+                                document.querySelector('jsuites-rating').addEventListener('onchange', function(e) {
+                                document.getElementById('rating').value =this.value;});

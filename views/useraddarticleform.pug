@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(href='useraddarticleform.css' rel='stylesheet')
+        script(src='validationarticle.js' defer='')
+    body
+        form(action='/articlepost' method='post' enctype='application/x-www-form-urlencoded')
+            .articlepage
+                h1 Article Form    
+                .inputform
+                    label.inputblock(for='title') Title
+                    input#title(type='text' name='title')
+                .inputform
+                    label.inputblock(for='subject') Subject
+                    select#subject(name='subject')
+                        option(value='' checked='') please select
+                        each val in data1
+                            option(value=`${val._id}`) #{val.subject}
+                .inputform
+                    label.inputblock(for='description') Description
+                    input#description(type='text' name='description')
+                .inputform
+                    label.inputblock(for='article') Article
+                    textarea#article(rows='5' cols='15' name='article')
+                .inputform
+                    input(type='submit' value='submit')
+                p#validationwrite.pstyle(style='display:none') Validation
+
+    
+            

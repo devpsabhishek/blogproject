@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Editarticle
+        link(href='../../editarticleform.css' rel='stylesheet')
+    body
+        .contactpage 
+            form(action=`/Editarticle/${id}` method='post')
+                p Editing  form
+                .inputform
+                    label.inputblock(for='description') Description
+                    input#description(type='text' name='description' value=`${description}`)
+                .inputform
+                    label.inputblock(for='article') Address
+                    textarea#address(rows='10' cols='20' name='article') #{article}      
+                .inputform
+                    input#submit.submitbutton.inputblock(type='Submit' value='Submit')

@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Homeadmin
+        link(href='homeadmin.css' rel='stylesheet')
+        
+    body
+        div.missingfield 
+            if(message)
+                h3 #{message} 
+        form(action='/admin' method='post')
+            .contactpage
+                p Login
+                .inputform
+                    label.inputblock(for='userid') User id
+                    input#userid(type='text'  name='userid')
+                .inputform
+                    label.inputblock(for='password') Password
+                    input#password(type='password' name='password')
+                .inputform
+                    input#submit.submitbutton.inputblock(type='Submit' value='Submit')

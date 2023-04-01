@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        title Articleeditdelete
+        link(href='admindeleteeditaddtopic.css' rel='stylesheet')
+        script(src='confirmtopicdelete.js' defer='')
+    body
+        .style
+            a(href = 'addtopic') ADD TOPICS
+        h4 Topic list 
+        table
+            tr 
+                th Topic
+                th Edit 
+                th Delete
+            tr
+                each val in topic
+                    td #{val.subject}
+                    td
+                        a.edit(href = `/Edittopic/${val._id}`) Edit
+                    td    
+                        a.delete(onclick= 'return confirm3("'+ val._id +'")') Delete
+                    tr     

@@ -1,0 +1,39 @@
+h3
+{
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+}
+.contentarticle 
+{
+    margin-top:40px;
+    width:60%;
+    margin-left:200px;
+    margin-right:40px;
+    border:2px solid black;
+    border-radius:10px;
+}
+.articlecintent 
+{
+    padding:10px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    
+}
+.articleby p,h4 
+{
+    color:red;
+    font-size: xx-small;
+}
+.articleby a{
+    background-color: red;
+    padding:10px;
+    cursor: pointer;
+    margin-bottom:20px;
+}
+.checked
+{
+    color:orange;
+}

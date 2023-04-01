@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        title Admineditingtopic form
+        link(href="../../admineditingtopicform.css")
+    body
+        if(message)
+            p #{message}
+        .contactpage 
+            form(action=`/Edittopic/${id}` method='post')
+                p Editing  form
+                .inputform
+                    label.inputblock(for='subject') Subject
+                    input#subject(type='text' name='subject' value=`${subject}`)
+                .inputform
+                    input#submit.submitbutton.inputblock(type='Submit' value='Submit') 

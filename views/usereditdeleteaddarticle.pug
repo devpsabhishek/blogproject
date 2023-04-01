@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        title Articleeditdelete
+        link(href='usereditdeleteaddarticle.css' rel='stylesheet')
+        script(src='confirmarticledelete.js' defer='')
+    body
+        .style
+            a(href = 'addarticle') ADD ARTICLE
+        h4 Users list 
+        table
+            tr 
+                th Email
+                th Subject
+                th Article
+                th Title
+                th Description
+                th Rating
+                th Update 
+                th delete
+                
+            tr
+                each val in article
+                    td #{val.email}
+                    each val2 in topic
+                        if val2._id==val.subject
+                            td #{val2.subject}
+                    td #{val.article}
+                    td #{val.title}
+                    td #{val.description}
+                    td #{val.rating}
+                    td
+                        a.edit(href = `/Editarticle/${val._id}`) Edit
+                    td    
+                        a.delete(onclick= 'return confirm2("'+ val._id +'")') Delete
+                    tr     
+

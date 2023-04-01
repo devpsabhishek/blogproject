@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Articles
+        link(href='../../homearticlesee.css' rel='stylesheet')
+    body 
+        .container
+            if(heading)
+                h3 About #{heading}
+            each val in article    
+                .contentarticle
+                    .articlecintent 
+                        h2 Article
+                            p #{val.article}
+                    .articleby        
+                        h4 Posted by 
+                            p #{val.email}

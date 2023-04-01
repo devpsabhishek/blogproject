@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        title Articleeditdelete
+        link(href='admindeleteeditaddtopicmanager.css' rel='stylesheet')
+        script(src='confirmdeletetopicmanager.js' defer='')
+    body
+        .style
+            a(href = 'addtopicmanagers') ADD TOPICMANAGERS
+        h4 Topicmanager list 
+        table
+            tr 
+                th UserId 
+                th Name
+                th Subject
+                th Edit
+                th Delete
+            tr
+                each val in topicmanager
+                    td #{val.userid}
+                    td #{val.name}
+                    each val2 in topic
+                        if val2._id==val.subject
+                            td #{val2.subject}
+                    td
+                        a.edit(href = `/Edittopicmanager/${val._id}`) Edit
+                    td    
+                        a.delete(onclick= 'return confirm4("'+ val._id +'")') Delete
+                    tr     

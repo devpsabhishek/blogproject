@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title showbasetable
+        link(href='showadmin.css' rel='stylesheet')
+        script(src='confirm.js' defer='')
+    body 
+        h4 Users list 
+        table
+            tr 
+                th ObjectId 
+                th Email
+                th Name
+                th Address
+                th Phoneno
+                th Approved
+                th Update 
+                th delete
+                th reject
+                th accept
+            tr
+                each val in person 
+                    td #{val._id}
+                    td #{val.email}
+                    td #{val.name}
+                    td #{val.address}
+                    td #{val.phoneno}
+                    td #{val.approved}
+                    td
+                        a.edit(href = `/Edit/${val._id}`) Edit
+                    td    
+                        a.delete(onclick= 'return confirm1("'+ val._id +'")') Delete
+                    td    
+                        a.reject(href = `/Reject/${val._id}`) Reject 
+                    td    
+                        a.accept(href = `/Accept/${val._id}`) Accept  
+                    tr     
